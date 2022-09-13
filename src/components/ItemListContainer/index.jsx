@@ -35,7 +35,7 @@ export const ItemListContainer = (props) => {
     console.log(props);
     return (
         <>
-        <Title greeting="Catalina" />
+        <Title greeting="Crochet Bunker" />
 <ItemList data={data}/>
         </>
     );
