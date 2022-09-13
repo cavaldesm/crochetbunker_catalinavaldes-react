@@ -25,7 +25,7 @@ const { addProduct } = useCartContext();
                     <h1>{data.title}</h1>
                     {
                         goToCart
-                        ? <Link to='/cart'>Terminar compra</Link>
+                        ? <Link to='/cart'>Finalizar compra</Link>
                         : <ItemCount initial={3} stock={5} onAdd={onAdd} />
                     }
                 </div>
