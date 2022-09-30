@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Title/title.css';
 
 export const Title = (props) => {
     console.log(props);

@@ -3,6 +3,7 @@ import React from 'react';
 import { useCartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import ItemCart from '../ItemCart';
+import '../Cart/Cart.css';
 
 const Cart = () => {
     const { cart, totalPrice } = useCartContext();
@@ -15,7 +16,7 @@ const Cart = () => {
             address: 'Alcorta'
         },
         items: cart.map(product => ({ id: product.id, title: product.title, price: product.price, quantity: product.quantity })),
-        total: totalPrice(),
+        total: totalPrice()
     }
 
     const handleClick = () => {
@@ -29,10 +30,10 @@ const Cart = () => {
 
     if (cart.length === 0) {
         return (
-            <>
-            <p>No hay elementos en el carrito</p>
-            <Link to='/'>Hacer compra</Link>
-            </>
+            <div className="cartContainer">
+            <p className="cartMessage">No hay elementos en el carrito :-(</p>
+            <Link className="cartLink" to='/'>¡Hacer compra!</Link>
+            </div>
         );
     }
 

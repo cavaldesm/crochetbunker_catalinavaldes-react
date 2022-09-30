@@ -10,6 +10,8 @@ import Footer from './components/Footer/footer';
 import Header from './components/Header/header';
 import './index.css';
 
+import ('https://fonts.googleapis.com/css2?family=Ruda:wght@900&display=swap');
+
 export const CartContext = React.createContext([]);
 console.log('CartContext: ', CartContext);
 

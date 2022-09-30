@@ -20,12 +20,12 @@ const { addProduct } = useCartContext();
     return (
         <div className="container">
             <div className="detail">
-                <img className="detail_image" src={data.image} alt="" />
+                <img className="detail_image" src={data.image} alt='' />
                 <div className="content">
-                    <h1>{data.title}</h1>
+                    <h1 className="titulo">{data.title}</h1>
                     {
                         goToCart
-                        ? <Link to='/cart'>Finalizar compra</Link>
+                        ? <Link className="contentLink" to='/cart'>Finalizar compra</Link>
                         : <ItemCount initial={3} stock={5} onAdd={onAdd} />
                     }
                 </div>
